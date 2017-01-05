@@ -12,8 +12,8 @@
 # doodle.setMicroRes(8) #Number of micro steps in beat
 
 ## A track, instruments/voice within the composition
-# t1 = Track("BD")
-# t2 = Track("SD")
+# t1 = Track("BD", Midi(1, 36))
+# t2 = Track("SD", Midi(1, 35))
 # doodle.addTracks([t1, t2])
 
 # A segment of "music" (several bars, usually 4, 8, 16)
@@ -27,7 +27,7 @@
 # np.setTemplate("SD", "0???") # nothing on the first step
 # np.swing("sine", "0101", 0.5, doodle.getMicroRes()) # Factor of swing, guide, amount and speed (size of cycle)
 # # Some ideas
-# Destinations: timing (default), velocity, duration, repeating
+# Destinations: timing (default), velocity, duration, repeating/stutter
 # Type of modifiers: sine (bipolar), pos sine (just the positive values), abssine, tri, random
 #
 # Don't try everything at once - the modifier is all that needs to be rated, the note grid/template can be static!
