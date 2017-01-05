@@ -7,8 +7,9 @@
 # but maybe better to land on a format for now, 8 micro steps pr beat? (32 steps)
 # 
 # doodle = Doodle()
+# doodle.setTempo(118)
 # doodle.setTiming(4, 4)
-# doodle.setMicroResolution(8) #Number of micro steps in beat
+# doodle.setMicroRes(8) #Number of micro steps in beat
 
 ## A track, instruments/voice within the composition
 # t1 = Track("BD")
@@ -24,6 +25,7 @@
 # NotePainter
 # np.setTemplate("BD", "101?") # first and third beat
 # np.setTemplate("SD", "0???") # nothing on the first step
+# np.swing("sine", "0101", 0.5, doodle.getMicroRes()) # Factor of swing, guide, amount and speed (size of cycle)
 # np.randomize()
 # np.drawInBar(bar)
 
@@ -35,6 +37,7 @@
 # Analyse...
 #   What positions are rated +1
 #   What positions are rated -1
+#   What swing guides are rated +1 or -1
 
 #
 # BD 1 0 1 0
