@@ -1,16 +1,45 @@
 <html>
 <head>
 <script>
-var grid = {};
-grid['BD'] = new Array(1, 0, 0, 0);
-grid['SD'] = new Array(0, 1, 0, 1);
+  var grid = {};
+  grid['BD'] = new Array(1, 0, 0, 0);
+  grid['SD'] = new Array(0, 1, 0, 1);
 
-var snd = new Audio("piano2.wav"); // buffers automatically when created
-snd.play();
+  var snd = new Audio("piano2.wav"); // buffers automatically when created
+  snd.play();
+
+  // bpm 120 = 120 / 60 = 2 pr sec
+
+  var bpm = 120;
+  var bpms = 1000 / (bpm/60);
+  var sTime = new Date();
+  
+  function Timer() {
+  	// Now what
+    diff = (new Date()).getTime() - sTime.getTime();
+    return {'beat': };
+  }
+  
+  var i = 0, limit = 200, busy = false; 
+
+  var processor = setInterval(function() {
+    if(!busy) {
+      busy = true;
+      
+      
+      
+      busy = false;
+    }
+  }, 100);
 </script>
 </head>
 
 <body>
 Test
+  
+  <div id="1">1</div>
+  <div id="2">2</div>
+  <div id="3">3</div>
+  <div id="4">4</div>
 </body>
 </html>
