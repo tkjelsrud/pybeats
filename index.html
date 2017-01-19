@@ -26,10 +26,16 @@
   var i = 0, limit = 200, busy = false; 
 
   var processor = setInterval(function() {
+    lBeat = Timer();
+    
     if(!busy) {
       busy = true;
       
-      console.log(Timer());
+      if(lBeat['beat'] != (Timer())['beat']) {
+        // New beat yall
+        
+      }
+      //console.log(Timer());
       
       busy = false;
     }
