@@ -20,7 +20,7 @@
   	// Now what
     diff = (new Date()).getTime() - sTime.getTime();
     
-    return {'beat': (diff / bpms), 'mbeat': (diff / mbms)};
+    return {'beat': parseInt(diff / bpms), 'mbeat': parseInt(diff / mbms)};
   }
   
   var i = 0, limit = 200, busy = false; 
