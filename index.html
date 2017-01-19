@@ -26,9 +26,10 @@
   
   var i = 0, limit = 200, busy = false; 
 
-  var processor = setInterval(function() {
-    lBeat = Timer();
+  lBeat = Timer();
     
+  var processor = setInterval(function() {
+
     if(!busy) {
       busy = true;
       nBeat = (Timer());
