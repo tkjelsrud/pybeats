@@ -12,12 +12,15 @@
 
   var bpm = 120;
   var bpms = 1000 / (bpm/60);
+  var mibeat = 16;
+  var mbms = 1000 / ((bpm/60) * mibeat);
   var sTime = new Date();
   
   function Timer() {
   	// Now what
     diff = (new Date()).getTime() - sTime.getTime();
-    return {'beat': };
+    
+    return {'beat': (diff / bpms), 'mbeat': (diff / mbms)};
   }
   
   var i = 0, limit = 200, busy = false; 
@@ -26,7 +29,7 @@
     if(!busy) {
       busy = true;
       
-      
+      console.log(Timer());
       
       busy = false;
     }
