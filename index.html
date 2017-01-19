@@ -27,13 +27,13 @@
   var i = 0, limit = 200, busy = false; 
 
   lBeat = Timer();
+  cBeat = 0;
     
   var processor = setInterval(function() {
 
     if(!busy) {
       busy = true;
       nBeat = (Timer());
-      cBeat = 0;
       
       if(lBeat['beat'] != nBeat['beat']) {
         // New beat yall
