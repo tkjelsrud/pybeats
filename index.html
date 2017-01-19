@@ -38,7 +38,7 @@
         // New beat yall
         document.getElementById("bt_" + cBeat).style.backgroundColor = 'white';
         cBeat = nBeat['beat'] % beatBar;
-        
+        console.log(cBeat);
         document.getElementById("bt_" + cBeat).style.backgroundColor = 'green';
         lBeat = nBeat();
       }
