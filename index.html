@@ -15,6 +15,8 @@
 
   // bpm 120 = 120 / 60 = 2 pr sec
 
+  var mData = {'tracks': {'BD': [1, 0, 0, 0], 'SD': [0, 1, 0, 1]}};
+  
   var beatBar = 4;
   var bpm = 120;
   var bpms = 1000 / (bpm/60);
@@ -51,19 +53,26 @@
       else if(lBeat['mbeat'] != nBeat['mbeat']) {
         // New micro beat
         // Do something, anything...
-        
+        if(lBeat['mbeat'] +1 < nBeat['mbeat']) {
+          // Distance too big, notes are skipped?
+        }
       }
       
       
       busy = false;
     }
   }, 50);
+  
+  function playTrackIf() {
+    // 
+    for(var i = 0; i < tracks; i++) {
+      
+    }
+  }
 </script>
 </head>
 
 <body>
-Test
-  
   <div id="bt_0" class="beat">1</div>
   <div id="bt_1" class="beat">2</div>
   <div id="bt_2" class="beat">3</div>
