@@ -1,5 +1,10 @@
 <html>
 <head>
+  <style type="text/css">
+    .beat {
+      float: left;
+    }
+  </style>
 <script>
   /*var grid = {};
   grid['BD'] = new Array(1, 0, 0, 0);
@@ -43,20 +48,25 @@
         document.getElementById("bt_" + cBeat).style.backgroundColor = 'green';
         lBeat = nBeat;
       }
-      //console.log(Timer());
+      else if(lBeat['mbeat'] != nBeat['mbeat']) {
+        // New micro beat
+        // Do something, anything...
+        
+      }
+      
       
       busy = false;
     }
-  }, 100);
+  }, 50);
 </script>
 </head>
 
 <body>
 Test
   
-  <div id="bt_0">1</div>
-  <div id="bt_1">2</div>
-  <div id="bt_2">3</div>
-  <div id="bt_3">4</div>
+  <div id="bt_0" class="beat">1</div>
+  <div id="bt_1" class="beat">2</div>
+  <div id="bt_2" class="beat">3</div>
+  <div id="bt_3" class="beat">4</div>
 </body>
 </html>
